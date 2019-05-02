@@ -1,3 +1,16 @@
 body{
-    background-color: red;
+    background-color: #fff;
+    text-align: center;
 }
+
+.jumbotron{
+    background-color: #3b5998;
+    color: #fff;
+    text-align: center;
+
+}
+
+.btn-light{
+    color: #3b5998;
+}
+
