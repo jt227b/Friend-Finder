@@ -1,38 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- < CSS styles > -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.6/chosen.css">
+
+
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="shortcut icon" href="./like.png" />
+    <!-- < JS scripts > -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.6/chosen.jquery.min.js"></script>
 
-
-    <title>Friend Finder</title>
 </head>
 
+<style>
+    img {
+        height: 50%;
+        width: 50%;
+    }
+</style>
+
 <body>
+
+    <!-- Facebook Container-->
     <div class="container">
-
         <div class="jumbotron">
-            <h1>Survey Questions </a><i class="far fa-thumbs-up"></i></h1>
 
-            <hr class="my-4">
-            <div class="form-group">
-                <label for="name">Full Name (Required)</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="photo">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo">
-            </div>
+            <h1>Survey Questions </a><i class="far fa-thumbs-up"></i></h1>
+            <br>
+            <hr>
+
+            <h4>Name (Required)</h4>
+            <input type="text" id="name" class="form-control" required>
+
+            <h4>Link to Photo Image (Required)</h4>
+            <input type="text" id="photo" class="form-control" required>
+
         </div>
 
+        <!-- Questions -->
         <h3><strong>Question 1</strong></h3>
         <h4>You would love to travel the world.</h4>
         <select class="chosen-select" id="q1">
@@ -43,9 +57,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
-
+        <br>
         <h3><strong>Question 2</strong></h3>
         <h4>You enjoy having drinks with your friends.</h4>
         <select class="chosen-select" id="q2">
@@ -56,8 +68,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
+        <br>
         <h3><strong>Question 3</strong></h3>
         <h4>You love to dance every type of music.</h4>
         <select class="chosen-select" id="q3">
@@ -68,8 +79,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
+        <br>
         <h3><strong>Question 4</strong></h3>
         <h4>Breakfast restaurants are your favorite.</h4>
         <select class="chosen-select" id="q4">
@@ -80,8 +90,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
+        <br>
         <h3><strong>Question 5</strong></h3>
         <h4>You love reading new books.</h4>
         <select class="chosen-select" id="q5">
@@ -92,8 +101,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
+        <br>
         <h3><strong>Question 6</strong></h3>
         <h4>You love to be the first one to watch the new movies.</h4>
         <select class="chosen-select" id="q6">
@@ -104,8 +112,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
-
+        <br>
         <h3><strong>Question 7</strong></h3>
         <h4>You always say good morning to everyone at work.</h4>
         <select class="chosen-select" id="q7">
@@ -116,7 +123,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
+        <br>
         <h3><strong>Question 8</strong></h3>
         <h4>You have a great sense of humor.</h4>
         <select class="chosen-select" id="q8">
@@ -127,7 +134,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
+        <br>
         <h3><strong>Question 9</strong></h3>
         <h4>You love jogging in the afternoon.</h4>
         <select class="chosen-select" id="q9">
@@ -138,7 +145,7 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
+        <br>
         <h3><strong>Question 10</strong></h3>
         <h4>The weather doesn't affect your mood.</h4>
         <select class="chosen-select" id="q10">
@@ -153,24 +160,24 @@
         <br>
         <br>
 
-        <!-- Submition Button -->
+        <!-- Submit Button -->
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-            <i class="far fa-check-square"></i> Submit</button>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Submit</button>
+
+        <br>
+        <!-- Footer -->
+        <hr>
+        <footer>
+            <div>
+                <p>
+                    <a href="../data/friends.js">API Friends List</a> | <a
+                        href="https://github.com/jt227b/Friend-Finder.git">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
 
     </div>
-
-    <br>
-    <!-- Footer -->
-    <hr>
-    <footer>
-        <div>
-            <p>
-                <a href="../data/friends.js">API Friends List</a> | <a
-                    href="https://github.com/jt227b/Friend-Finder.git">GitHub Repo</a>
-            </p>
-        </div>
-    </footer>
-
 
     <!-- Modal -->
     <div id="results-modal" class="modal fade" role="dialog">
@@ -181,7 +188,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h2 class="modal-title">
-                        <strong>Best Match</strong>
+                        <strong>Meet Your Friend</strong>
                     </h2>
                 </div>
                 <div class="modal-body">
@@ -192,10 +199,10 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script type="text/javascript">
 
         var config = {
@@ -258,7 +265,7 @@
                     $("#results-modal").modal("toggle");
                 });
             } else {
-                alert("Please fill out all fields before submitting!");
+                alert("It's required to fill out all the info before submitting!");
             }
             $("#name").val(""),
                 $("#photo").val(""),
@@ -275,16 +282,6 @@
         });
     </script>
 
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
