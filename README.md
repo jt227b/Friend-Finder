@@ -38,13 +38,13 @@ https://jt227b.github.io/Friend-Finder/.
 ## Screenshots
 
 1. Friend Finder Homepage
-<img width="960" alt="Home" src=" Screenshots Go In Here ">
+![FriendFinder](https://user-images.githubusercontent.com/46248532/57173104-c880b400-6def-11e9-9be5-3248852f0d9a.png)
 
 2. Survey Questions Page
-<img width="376" alt="Survey" src=" Screenshots Go In Here ">
+![Survey](https://user-images.githubusercontent.com/46248532/57173116-fc5bd980-6def-11e9-86b6-40c0ae963919.png)
 
 3. Results Page
-<img width="376" alt="Results" src=" Screenshots Go In Here ">
+![FriendMatch](https://user-images.githubusercontent.com/46248532/57173119-01208d80-6df0-11e9-8c52-8ea16060c11a.png)
 
 
 
